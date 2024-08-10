@@ -1,0 +1,16 @@
+public class recursion17{
+    public static void main(String[] args){
+        int[] arr = {4, 3, 2, 1}; 
+        bubble(arr, 0);
+        System.out.println(Arrays.toString(arr));
+    }
+    
+    public static void bubble(int[] arr, int index){
+        if(arr[index] > arr[index + 1]){
+            int temp = arr[index];
+            arr[index] = arr[index + 1];
+            arr[index + 1] = temp;
+        }
+        bubble(arr, index + 1);
+    }
+}
